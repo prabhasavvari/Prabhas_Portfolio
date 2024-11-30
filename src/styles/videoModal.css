@@ -1,0 +1,42 @@
+.video-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+  display: flex; /* Flexbox for centering */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  z-index: 1000; /* Ensure it appears above everything else */
+}
+
+.video-modal {
+  background: #fff; /* White background */
+  border-radius: 8px;
+  padding: 1rem;
+  position: relative; /* Relative for positioning close button */
+  width: 90%; /* Adjust modal width */
+  max-width: 800px; /* Limit maximum width */
+
+  iframe,
+  video {
+    width: 100%; /* Make the video or iframe responsive */
+    border-radius: 8px; /* Optional rounded corners */
+  }
+
+  .close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: transparent;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #333;
+  }
+
+  .close-button:hover {
+    color: #007bff; /* Add hover effect for close button */
+  }
+}

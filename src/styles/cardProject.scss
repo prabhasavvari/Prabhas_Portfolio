@@ -1,0 +1,28 @@
+// Import Bootstrap's main SCSS file
+@import "bootstrap/scss/bootstrap";
+
+// Set the card height to 100%
+$card-height: 100%;
+
+.card {
+  height: $card-height;
+  position: relative;
+  overflow: hidden; // Ensures no content goes outside the card
+  transform-style: preserve-3d;
+  transition: transform 0.3s, box-shadow 0.3s;
+
+  // Default shadow
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+  &:hover {
+    transform: translateY(-10px); // Lift effect
+    box-shadow: 0 10px 15px rgba(9, 9, 230, 0.432); // Stronger shadow
+  }
+}
+
+
+// Recompile Bootstrap with the updated variable
+@import "bootstrap/scss/bootstrap-grid";
+@import "bootstrap/scss/bootstrap-reboot";
+@import "bootstrap/scss/bootstrap-utilities";
+
